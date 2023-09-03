@@ -1,0 +1,324 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts and body styles */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f5f5f5;
+    /* Change to a light background color */
+    color: #333;
+    /* Change the default text color */
+}
+
+/* Navigation bar styles */
+nav {
+    background: #382A40;
+    padding: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 10px;
+    /* Increased padding for better touch experience on mobile */
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.btn.sec {
+    border-bottom: 1px #444 solid;
+}
+
+/* Mobile menu styles */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.btn {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+/* Navbar Toggle styles */
+.toggle {
+    cursor: pointer;
+}
+
+.bars {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.bars:before,
+.bars:after {
+    background: #999;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.bars:before {
+    top: 5px;
+}
+
+.bars:after {
+    top: -5px;
+}
+
+/* Tablet menu styles */
+@media all and (min-width: 468px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .item.btn {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    .btn.sec {
+        border: 0;
+    }
+
+    .btn a {
+        padding: 10px 20px;
+        /* Adjust button padding */
+        background: #4481eb;
+        border: 1px white solid;
+        border-radius: 50em;
+    }
+
+    .btn.sec a {
+        background: transparent;
+    }
+
+    .btn a:hover {
+        text-decoration: none;
+        background: #333;
+        /* Change button background color on hover */
+        border-color: #333;
+        /* Change button border color on hover */
+        color: white;
+    }
+
+    .btn.sec a:hover {
+        background: white;
+        border-color: white;
+        color: #333;
+    }
+}
+
+/* Desktop menu styles */
+@media all and (min-width: 768px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .btn {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 15px 20px;
+        /* Adjust menu item padding */
+    }
+
+    .menu li.btn {
+        padding-right: 0;
+    }
+}
+
+/* Content section styles */
+.content-head {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    padding-bottom: 5%;
+    /* Change content background color */
+}
+
+.content-head h1 {
+    font-size: 5.5vw;
+    /* Responsive font size based on viewport width */
+    margin-top: 5%;
+    color : #382A40
+           
+      
+}
+.content-head h1 .h1{
+    color:red;
+}
+.content-head p {
+    color: #3498db;
+    margin: 10px;
+    font-size: 25px;
+    /* Slightly lighter text color */
+}
+
+/* About section styles */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping of divs */
+}
+
+/* Style for the individual divs */
+
+/* Default styles for .box */
+.box {
+    width: 98%;
+    height: auto;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    font-size: 15px;
+    padding: 5%;
+}
+
+.box .left-div {
+    width: 50%;
+    background-color: white;
+}
+
+.box .right-div {
+    width: 50%;
+    background-color: white;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        /* Stack divs vertically */
+        width: 100%;
+    }
+
+    .box .left-div,
+    .box .right-div {
+        width: 100%;
+        /* Full width for both divs */
+    }
+}
+.box p{
+    color:black;
+    padding-top:30px;
+    line-height: 23px;;
+}
+.box h1{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+        /* Stack divs on top of each other */
+    }
+}
+
+/* Style for the entire footer section */
+footer {
+    background-color: #333;
+    /* Background color for the footer */
+    color: #fff;
+    /* Text color for the footer content */
+    padding: 20px 0;
+    /* Add some padding for spacing */
+}
+
+/* Style for the footer container */
+/* Style for the footer */
+.foot {
+    background-color: #382A40;
+    /* Background color for the footer */
+    padding: 20px;
+    /* Add some padding to the footer */
+    text-align: center;
+    /* Center-align the text within the footer */
+}
+
+/* Style for the footer links */
+.foot a {
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: #fff;
+    /* Text color for links */
+    margin: 10px;
+    /* Add spacing between links */
+    font-size: 16px;
+    /* Adjust the font size */
+}
+/* Hover effect for links */
+.foot a:hover {
+    color: #ff6600;
+    /* Change text color on hover */
+}
+.foot .copy{
+    padding-top :20px;
+    color: white;
+}
